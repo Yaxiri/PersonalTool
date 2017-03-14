@@ -6,7 +6,7 @@
 -->
 <html>
 <head>
-<title>APP</title>
+<title>F&T SERVICE</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -15,9 +15,20 @@
 <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
 <body class="landing">
+	<bgsound id="sound">
 	<div id="page-wrapper">
 
 		<!-- Header -->
+		
+		<script>
+		
+		
+			function playSound() {
+			document.all.sound.src = "assets/archivo/audio.wav"
+			}
+		
+		</script>
+		
 		<header id="header">
 			<h1 id="logo">
 				<a href="index.html"></a>
@@ -25,18 +36,20 @@
 			<nav id="nav">
 				<ul>
 
-					<li><a href="#" class="button special">Descargar Documento</a></li>
 				</ul>
 			</nav>
+			
 		</header>
 
 		<!-- Banner -->
 		<section id="banner">
 			<div class="content">
 				<header>
-					<h2>NAME APP</h2>
+					<h2>F&T SERVICE</h2>
 					<p>
-						BLA BLA BLA BLA BLA BLA
+						Servicio de computación cognitiva abierta.
+						
+						
 					</p>
 				</header>
 				<span class="image"><img src="images/pic01.png" alt="" /></span>
@@ -66,7 +79,8 @@
 								precisa.</p>
 						</div>
 						<div class="4u$ 12u$(medium)">
-							<p>MAX AGRUEGUE AQUI UN CUADRO Y QUE SE VAYA ESCRIBIENDO LO QUE SE ESCUCHA</p>
+							<textarea name="comentarios" rows="10" cols="40"></textarea>
+							</br>
 
 							<ul class="actions">
 								<li><a href="#" class="button">Play Record</a></li>
@@ -93,35 +107,53 @@
 					(franqueza, diligencia, extroversión, simpatía y rango emocional),
 					y estilos de lenguaje (analítico, seguro y vacilante).</p>
 				<ul class="actions">
-					<li><a href="#" class="button">Analizar</a></li>
+				
+					<li><a href="#" onclick="mostrar()" class="button">Analizar</a></li>
+					<li><a id="analisis" href="assets/archivo/archivo.json" download="AnalisisTono.json">Descargar Archivo</a></li>
 				</ul>
+				
 			</div>
 			<a href="#three" class="goto-next scrolly">Next</a>
 		</section>
 
 		<!-- Three -->
-		<section id="three" class="spotlight style3 left">
-			<span class="image fit main bottom"><img
-				src="images/pic04.jpg" alt="" /></span>
+		
+		<section id="one" class="spotlight style1 bottom">
+			<span class="image fit main"><img src="images/pic02.jpg"
+				alt="" /></span>
 			<div class="content">
-				<header>
-					<h2>Language Translator</h2>
-					<p>¿Desea traducir textos de forma dinámica?</p>
-				</header>
-				<p>¡Puede hacerlo con Watson Language Translator! Conecte el
-					servicio de Watson a su código y podrá optimizar la potencia de
-					nuestro servicio .</p>
-				<ul class="actions">
-					<li><a href="#" class="button">Traducir</a></li>
-				</ul>
+				<div class="container">
+					<div class="row">
+						<div class="4u 12u$(medium)">
+							<header>
+								<h2>Language Translator</h2>
+								<p>¿Desea traducir textos de forma dinámica?</p>
+							</header>
+						</div>
+						<div class="4u 12u$(medium)">
+							<p>¡Puede hacerlo con Watson Language Translator! Conecte el
+								servicio de Watson a su código y podrá optimizar la potencia de
+								nuestro servicio .</p>
+						</div>
+						<div class="4u$ 12u$(medium)">
+							<textarea  readonly="readonly" name="comentarios" rows="10" cols="40"></textarea>
+							</br>
+
+							<ul class="actions">
+								<li><a href="#" class="button">Translate</a></li>
+								
+								<li><a href="assets/archivo/audio.wav" class="button" title="Listen - Audio">Play</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
-			<a href="#four" class="goto-next scrolly">Next</a>
 		</section>
 
 
 		<!-- Footer -->
 		<footer id="footer">
-			<ul class="icons">
+<!-- 			<ul class="icons">
 				<li><a href="#" class="icon alt fa-twitter"><span
 						class="label">Twitter</span></a></li>
 				<li><a href="#" class="icon alt fa-facebook"><span
@@ -134,7 +166,7 @@
 						class="label">GitHub</span></a></li>
 				<li><a href="#" class="icon alt fa-envelope"><span
 						class="label">Email</span></a></li>
-			</ul>
+			</ul> -->
 			<ul class="copyright">
 				<li>&copy; Untitled. All rights reserved.</li>
 				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
@@ -152,6 +184,8 @@
 	<script src="assets/js/util.js"></script>
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
+	
+		
 
 </body>
 </html>

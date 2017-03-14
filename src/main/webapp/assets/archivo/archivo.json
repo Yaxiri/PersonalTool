@@ -1,0 +1,1001 @@
+{
+  "document_tone": {
+    "tone_categories": [
+      {
+        "category_id": "emotion_tone",
+        "category_name": "Emotion Tone",
+        "tones": [
+          {
+            "tone_id": "anger",
+            "tone_name": "Anger",
+            "score": 0.195845
+          },
+          {
+            "tone_id": "disgust",
+            "tone_name": "Disgust",
+            "score": 0.076472
+          },
+          {
+            "tone_id": "fear",
+            "tone_name": "Fear",
+            "score": 0.182431
+          },
+          {
+            "tone_id": "joy",
+            "tone_name": "Joy",
+            "score": 0.243312
+          },
+          {
+            "tone_id": "sadness",
+            "tone_name": "Sadness",
+            "score": 0.618192
+          }
+        ]
+      },
+      {
+        "category_id": "language_tone",
+        "category_name": "Language Tone",
+        "tones": [
+          {
+            "tone_id": "analytical",
+            "tone_name": "Analytical",
+            "score": 0.829266
+          },
+          {
+            "tone_id": "confident",
+            "tone_name": "Confident",
+            "score": 0.0
+          },
+          {
+            "tone_id": "tentative",
+            "tone_name": "Tentative",
+            "score": 0.0
+          }
+        ]
+      },
+      {
+        "category_id": "social_tone",
+        "category_name": "Social Tone",
+        "tones": [
+          {
+            "tone_id": "openness_big5",
+            "tone_name": "Openness",
+            "score": 0.104716
+          },
+          {
+            "tone_id": "conscientiousness_big5",
+            "tone_name": "Conscientiousness",
+            "score": 0.575889
+          },
+          {
+            "tone_id": "extraversion_big5",
+            "tone_name": "Extraversion",
+            "score": 0.667615
+          },
+          {
+            "tone_id": "agreeableness_big5",
+            "tone_name": "Agreeableness",
+            "score": 0.092849
+          },
+          {
+            "tone_id": "emotional_range_big5",
+            "tone_name": "Emotional Range",
+            "score": 0.805853
+          }
+        ]
+      }
+    ]
+  },
+  "sentences_tone": [
+    {
+      "sentence_id": 0,
+      "input_from": 0,
+      "input_to": 31,
+      "text": "I know the times are difficult!",
+      "tone_categories": [
+        {
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone",
+          "tones": [
+            {
+              "tone_id": "anger",
+              "tone_name": "Anger",
+              "score": 0.156788
+            },
+            {
+              "tone_id": "disgust",
+              "tone_name": "Disgust",
+              "score": 0.020382
+            },
+            {
+              "tone_id": "fear",
+              "tone_name": "Fear",
+              "score": 0.190925
+            },
+            {
+              "tone_id": "joy",
+              "tone_name": "Joy",
+              "score": 0.279472
+            },
+            {
+              "tone_id": "sadness",
+              "tone_name": "Sadness",
+              "score": 0.423957
+            }
+          ]
+        },
+        {
+          "category_id": "language_tone",
+          "category_name": "Language Tone",
+          "tones": [
+            {
+              "tone_id": "analytical",
+              "tone_name": "Analytical",
+              "score": 0.842108
+            },
+            {
+              "tone_id": "confident",
+              "tone_name": "Confident",
+              "score": 0.0
+            },
+            {
+              "tone_id": "tentative",
+              "tone_name": "Tentative",
+              "score": 0.0
+            }
+          ]
+        },
+        {
+          "category_id": "social_tone",
+          "category_name": "Social Tone",
+          "tones": [
+            {
+              "tone_id": "openness_big5",
+              "tone_name": "Openness",
+              "score": 0.20687
+            },
+            {
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness",
+              "score": 0.198762
+            },
+            {
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion",
+              "score": 0.09639
+            },
+            {
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness",
+              "score": 0.573345
+            },
+            {
+              "tone_id": "emotional_range_big5",
+              "tone_name": "Emotional Range",
+              "score": 0.06478
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sentence_id": 1,
+      "input_from": 32,
+      "input_to": 131,
+      "text": "Our sales have been disappointing for the past three quarters for our data analytics product suite.",
+      "tone_categories": [
+        {
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone",
+          "tones": [
+            {
+              "tone_id": "anger",
+              "tone_name": "Anger",
+              "score": 0.183253
+            },
+            {
+              "tone_id": "disgust",
+              "tone_name": "Disgust",
+              "score": 0.14042
+            },
+            {
+              "tone_id": "fear",
+              "tone_name": "Fear",
+              "score": 0.068885
+            },
+            {
+              "tone_id": "joy",
+              "tone_name": "Joy",
+              "score": 0.288739
+            },
+            {
+              "tone_id": "sadness",
+              "tone_name": "Sadness",
+              "score": 0.38174
+            }
+          ]
+        },
+        {
+          "category_id": "language_tone",
+          "category_name": "Language Tone",
+          "tones": [
+            {
+              "tone_id": "analytical",
+              "tone_name": "Analytical",
+              "score": 0.506763
+            },
+            {
+              "tone_id": "confident",
+              "tone_name": "Confident",
+              "score": 0.0
+            },
+            {
+              "tone_id": "tentative",
+              "tone_name": "Tentative",
+              "score": 0.0
+            }
+          ]
+        },
+        {
+          "category_id": "social_tone",
+          "category_name": "Social Tone",
+          "tones": [
+            {
+              "tone_id": "openness_big5",
+              "tone_name": "Openness",
+              "score": 0.070917
+            },
+            {
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness",
+              "score": 0.474335
+            },
+            {
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion",
+              "score": 0.433797
+            },
+            {
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness",
+              "score": 0.221349
+            },
+            {
+              "tone_id": "emotional_range_big5",
+              "tone_name": "Emotional Range",
+              "score": 0.818751
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sentence_id": 2,
+      "input_from": 132,
+      "input_to": 199,
+      "text": "We have a competitive data analytics product suite in the industry.",
+      "tone_categories": [
+        {
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone",
+          "tones": [
+            {
+              "tone_id": "anger",
+              "tone_name": "Anger",
+              "score": 0.089271
+            },
+            {
+              "tone_id": "disgust",
+              "tone_name": "Disgust",
+              "score": 0.125086
+            },
+            {
+              "tone_id": "fear",
+              "tone_name": "Fear",
+              "score": 0.270296
+            },
+            {
+              "tone_id": "joy",
+              "tone_name": "Joy",
+              "score": 0.195236
+            },
+            {
+              "tone_id": "sadness",
+              "tone_name": "Sadness",
+              "score": 0.39225
+            }
+          ]
+        },
+        {
+          "category_id": "language_tone",
+          "category_name": "Language Tone",
+          "tones": [
+            {
+              "tone_id": "analytical",
+              "tone_name": "Analytical",
+              "score": 0.653099
+            },
+            {
+              "tone_id": "confident",
+              "tone_name": "Confident",
+              "score": 0.0
+            },
+            {
+              "tone_id": "tentative",
+              "tone_name": "Tentative",
+              "score": 0.0
+            }
+          ]
+        },
+        {
+          "category_id": "social_tone",
+          "category_name": "Social Tone",
+          "tones": [
+            {
+              "tone_id": "openness_big5",
+              "tone_name": "Openness",
+              "score": 0.143065
+            },
+            {
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness",
+              "score": 0.312681
+            },
+            {
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion",
+              "score": 0.687347
+            },
+            {
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness",
+              "score": 0.351194
+            },
+            {
+              "tone_id": "emotional_range_big5",
+              "tone_name": "Emotional Range",
+              "score": 0.678823
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sentence_id": 3,
+      "input_from": 200,
+      "input_to": 237,
+      "text": "But we need to do our job selling it!",
+      "tone_categories": [
+        {
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone",
+          "tones": [
+            {
+              "tone_id": "anger",
+              "tone_name": "Anger",
+              "score": 0.128593
+            },
+            {
+              "tone_id": "disgust",
+              "tone_name": "Disgust",
+              "score": 0.214853
+            },
+            {
+              "tone_id": "fear",
+              "tone_name": "Fear",
+              "score": 0.194417
+            },
+            {
+              "tone_id": "joy",
+              "tone_name": "Joy",
+              "score": 0.236811
+            },
+            {
+              "tone_id": "sadness",
+              "tone_name": "Sadness",
+              "score": 0.279968
+            }
+          ]
+        },
+        {
+          "category_id": "language_tone",
+          "category_name": "Language Tone",
+          "tones": [
+            {
+              "tone_id": "analytical",
+              "tone_name": "Analytical",
+              "score": 0.0
+            },
+            {
+              "tone_id": "confident",
+              "tone_name": "Confident",
+              "score": 0.0
+            },
+            {
+              "tone_id": "tentative",
+              "tone_name": "Tentative",
+              "score": 0.0
+            }
+          ]
+        },
+        {
+          "category_id": "social_tone",
+          "category_name": "Social Tone",
+          "tones": [
+            {
+              "tone_id": "openness_big5",
+              "tone_name": "Openness",
+              "score": 0.078972
+            },
+            {
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness",
+              "score": 0.636498
+            },
+            {
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion",
+              "score": 0.324515
+            },
+            {
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness",
+              "score": 0.488792
+            },
+            {
+              "tone_id": "emotional_range_big5",
+              "tone_name": "Emotional Range",
+              "score": 0.767202
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sentence_id": 4,
+      "input_from": 238,
+      "input_to": 290,
+      "text": "We need to acknowledge and fix our sales challenges.",
+      "tone_categories": [
+        {
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone",
+          "tones": [
+            {
+              "tone_id": "anger",
+              "tone_name": "Anger",
+              "score": 0.245085
+            },
+            {
+              "tone_id": "disgust",
+              "tone_name": "Disgust",
+              "score": 0.1167
+            },
+            {
+              "tone_id": "fear",
+              "tone_name": "Fear",
+              "score": 0.295528
+            },
+            {
+              "tone_id": "joy",
+              "tone_name": "Joy",
+              "score": 0.297509
+            },
+            {
+              "tone_id": "sadness",
+              "tone_name": "Sadness",
+              "score": 0.111047
+            }
+          ]
+        },
+        {
+          "category_id": "language_tone",
+          "category_name": "Language Tone",
+          "tones": [
+            {
+              "tone_id": "analytical",
+              "tone_name": "Analytical",
+              "score": 0.913895
+            },
+            {
+              "tone_id": "confident",
+              "tone_name": "Confident",
+              "score": 0.0
+            },
+            {
+              "tone_id": "tentative",
+              "tone_name": "Tentative",
+              "score": 0.0
+            }
+          ]
+        },
+        {
+          "category_id": "social_tone",
+          "category_name": "Social Tone",
+          "tones": [
+            {
+              "tone_id": "openness_big5",
+              "tone_name": "Openness",
+              "score": 0.114568
+            },
+            {
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness",
+              "score": 0.438245
+            },
+            {
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion",
+              "score": 0.554204
+            },
+            {
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness",
+              "score": 0.396735
+            },
+            {
+              "tone_id": "emotional_range_big5",
+              "tone_name": "Emotional Range",
+              "score": 0.593352
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sentence_id": 5,
+      "input_from": 291,
+      "input_to": 344,
+      "text": "We can’t blame the economy for our lack of execution!",
+      "tone_categories": [
+        {
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone",
+          "tones": [
+            {
+              "tone_id": "anger",
+              "tone_name": "Anger",
+              "score": 0.1555
+            },
+            {
+              "tone_id": "disgust",
+              "tone_name": "Disgust",
+              "score": 0.091787
+            },
+            {
+              "tone_id": "fear",
+              "tone_name": "Fear",
+              "score": 0.17851
+            },
+            {
+              "tone_id": "joy",
+              "tone_name": "Joy",
+              "score": 0.167719
+            },
+            {
+              "tone_id": "sadness",
+              "tone_name": "Sadness",
+              "score": 0.488952
+            }
+          ]
+        },
+        {
+          "category_id": "language_tone",
+          "category_name": "Language Tone",
+          "tones": [
+            {
+              "tone_id": "analytical",
+              "tone_name": "Analytical",
+              "score": 0.687768
+            },
+            {
+              "tone_id": "confident",
+              "tone_name": "Confident",
+              "score": 0.0
+            },
+            {
+              "tone_id": "tentative",
+              "tone_name": "Tentative",
+              "score": 0.0
+            }
+          ]
+        },
+        {
+          "category_id": "social_tone",
+          "category_name": "Social Tone",
+          "tones": [
+            {
+              "tone_id": "openness_big5",
+              "tone_name": "Openness",
+              "score": 0.600462
+            },
+            {
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness",
+              "score": 0.654879
+            },
+            {
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion",
+              "score": 0.496949
+            },
+            {
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness",
+              "score": 0.559371
+            },
+            {
+              "tone_id": "emotional_range_big5",
+              "tone_name": "Emotional Range",
+              "score": 0.823619
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sentence_id": 6,
+      "input_from": 345,
+      "input_to": 389,
+      "text": "We are missing critical sales opportunities.",
+      "tone_categories": [
+        {
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone",
+          "tones": [
+            {
+              "tone_id": "anger",
+              "tone_name": "Anger",
+              "score": 0.045609
+            },
+            {
+              "tone_id": "disgust",
+              "tone_name": "Disgust",
+              "score": 0.011079
+            },
+            {
+              "tone_id": "fear",
+              "tone_name": "Fear",
+              "score": 0.088822
+            },
+            {
+              "tone_id": "joy",
+              "tone_name": "Joy",
+              "score": 0.108143
+            },
+            {
+              "tone_id": "sadness",
+              "tone_name": "Sadness",
+              "score": 0.772698
+            }
+          ]
+        },
+        {
+          "category_id": "language_tone",
+          "category_name": "Language Tone",
+          "tones": [
+            {
+              "tone_id": "analytical",
+              "tone_name": "Analytical",
+              "score": 0.0
+            },
+            {
+              "tone_id": "confident",
+              "tone_name": "Confident",
+              "score": 0.0
+            },
+            {
+              "tone_id": "tentative",
+              "tone_name": "Tentative",
+              "score": 0.0
+            }
+          ]
+        },
+        {
+          "category_id": "social_tone",
+          "category_name": "Social Tone",
+          "tones": [
+            {
+              "tone_id": "openness_big5",
+              "tone_name": "Openness",
+              "score": 0.222527
+            },
+            {
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness",
+              "score": 0.283301
+            },
+            {
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion",
+              "score": 0.609262
+            },
+            {
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness",
+              "score": 0.611347
+            },
+            {
+              "tone_id": "emotional_range_big5",
+              "tone_name": "Emotional Range",
+              "score": 0.228257
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sentence_id": 7,
+      "input_from": 390,
+      "input_to": 451,
+      "text": "Our product is in no way inferior to the competitor products.",
+      "tone_categories": [
+        {
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone",
+          "tones": [
+            {
+              "tone_id": "anger",
+              "tone_name": "Anger",
+              "score": 0.439805
+            },
+            {
+              "tone_id": "disgust",
+              "tone_name": "Disgust",
+              "score": 0.088364
+            },
+            {
+              "tone_id": "fear",
+              "tone_name": "Fear",
+              "score": 0.252826
+            },
+            {
+              "tone_id": "joy",
+              "tone_name": "Joy",
+              "score": 0.152342
+            },
+            {
+              "tone_id": "sadness",
+              "tone_name": "Sadness",
+              "score": 0.135542
+            }
+          ]
+        },
+        {
+          "category_id": "language_tone",
+          "category_name": "Language Tone",
+          "tones": [
+            {
+              "tone_id": "analytical",
+              "tone_name": "Analytical",
+              "score": 0.87766
+            },
+            {
+              "tone_id": "confident",
+              "tone_name": "Confident",
+              "score": 0.0
+            },
+            {
+              "tone_id": "tentative",
+              "tone_name": "Tentative",
+              "score": 0.0
+            }
+          ]
+        },
+        {
+          "category_id": "social_tone",
+          "category_name": "Social Tone",
+          "tones": [
+            {
+              "tone_id": "openness_big5",
+              "tone_name": "Openness",
+              "score": 0.388628
+            },
+            {
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness",
+              "score": 0.336448
+            },
+            {
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion",
+              "score": 0.695929
+            },
+            {
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness",
+              "score": 0.180594
+            },
+            {
+              "tone_id": "emotional_range_big5",
+              "tone_name": "Emotional Range",
+              "score": 0.809299
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sentence_id": 8,
+      "input_from": 452,
+      "input_to": 531,
+      "text": "Our clients are hungry for analytical tools to improve their business outcomes.",
+      "tone_categories": [
+        {
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone",
+          "tones": [
+            {
+              "tone_id": "anger",
+              "tone_name": "Anger",
+              "score": 0.093471
+            },
+            {
+              "tone_id": "disgust",
+              "tone_name": "Disgust",
+              "score": 0.031632
+            },
+            {
+              "tone_id": "fear",
+              "tone_name": "Fear",
+              "score": 0.014059
+            },
+            {
+              "tone_id": "joy",
+              "tone_name": "Joy",
+              "score": 0.553844
+            },
+            {
+              "tone_id": "sadness",
+              "tone_name": "Sadness",
+              "score": 0.347122
+            }
+          ]
+        },
+        {
+          "category_id": "language_tone",
+          "category_name": "Language Tone",
+          "tones": [
+            {
+              "tone_id": "analytical",
+              "tone_name": "Analytical",
+              "score": 0.347997
+            },
+            {
+              "tone_id": "confident",
+              "tone_name": "Confident",
+              "score": 0.0
+            },
+            {
+              "tone_id": "tentative",
+              "tone_name": "Tentative",
+              "score": 0.0
+            }
+          ]
+        },
+        {
+          "category_id": "social_tone",
+          "category_name": "Social Tone",
+          "tones": [
+            {
+              "tone_id": "openness_big5",
+              "tone_name": "Openness",
+              "score": 0.123709
+            },
+            {
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness",
+              "score": 0.323199
+            },
+            {
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion",
+              "score": 0.587601
+            },
+            {
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness",
+              "score": 0.447271
+            },
+            {
+              "tone_id": "emotional_range_big5",
+              "tone_name": "Emotional Range",
+              "score": 0.397088
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sentence_id": 9,
+      "input_from": 532,
+      "input_to": 566,
+      "text": "Economy has nothing to do with it.",
+      "tone_categories": [
+        {
+          "category_id": "emotion_tone",
+          "category_name": "Emotion Tone",
+          "tones": [
+            {
+              "tone_id": "anger",
+              "tone_name": "Anger",
+              "score": 0.232038
+            },
+            {
+              "tone_id": "disgust",
+              "tone_name": "Disgust",
+              "score": 0.059675
+            },
+            {
+              "tone_id": "fear",
+              "tone_name": "Fear",
+              "score": 0.259724
+            },
+            {
+              "tone_id": "joy",
+              "tone_name": "Joy",
+              "score": 0.24653
+            },
+            {
+              "tone_id": "sadness",
+              "tone_name": "Sadness",
+              "score": 0.297095
+            }
+          ]
+        },
+        {
+          "category_id": "language_tone",
+          "category_name": "Language Tone",
+          "tones": [
+            {
+              "tone_id": "analytical",
+              "tone_name": "Analytical",
+              "score": 0.0
+            },
+            {
+              "tone_id": "confident",
+              "tone_name": "Confident",
+              "score": 0.0
+            },
+            {
+              "tone_id": "tentative",
+              "tone_name": "Tentative",
+              "score": 0.0
+            }
+          ]
+        },
+        {
+          "category_id": "social_tone",
+          "category_name": "Social Tone",
+          "tones": [
+            {
+              "tone_id": "openness_big5",
+              "tone_name": "Openness",
+              "score": 0.203682
+            },
+            {
+              "tone_id": "conscientiousness_big5",
+              "tone_name": "Conscientiousness",
+              "score": 0.620608
+            },
+            {
+              "tone_id": "extraversion_big5",
+              "tone_name": "Extraversion",
+              "score": 0.486451
+            },
+            {
+              "tone_id": "agreeableness_big5",
+              "tone_name": "Agreeableness",
+              "score": 0.468883
+            },
+            {
+              "tone_id": "emotional_range_big5",
+              "tone_name": "Emotional Range",
+              "score": 0.821781
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
