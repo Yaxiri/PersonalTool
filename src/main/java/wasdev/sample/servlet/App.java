@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.sound.sampled.AudioFormat;
@@ -33,17 +34,18 @@ import com.ibm.watson.developer_cloud.tone_analyzer.v3.model.ToneAnalysis;
 public class App {
 	
 	static String Resultado;
+	static ArrayList<String> Conversacion;
 	
 	public static void main(String[] args) throws IOException, InterruptedException, LineUnavailableException {
 		//Resultado = "";
-		//SpeechToText();
+		SpeechToText();
 		//System.out.println("INICIA IMPRESION*********");
 		//System.out.println(Resultado);
 		//System.out.println("TERMINA IMPRESION*********");
 		//System.out.println(Traductor(Resultado, "ENGLISH"));
 		//textToSpeech(Traductor(Resultado, "ENGLISH"), "ENGLISH");
 		//Resultado = "";
-		ToneAnalyzer("HOLA");
+		//ToneAnalyzer("HOLA");
 	}
 
 	public static void CreateJson(String pDatos) throws IOException {
@@ -201,7 +203,7 @@ public class App {
 		
 	}
 
-	public static void ToneAnalyzer(String Analizar) throws IOException {
+	public static String ToneAnalyzer(String Analizar) throws IOException {
 		com.ibm.watson.developer_cloud.tone_analyzer.v3.ToneAnalyzer service = new com.ibm.watson.developer_cloud.tone_analyzer.v3.ToneAnalyzer(
 				com.ibm.watson.developer_cloud.tone_analyzer.v3.ToneAnalyzer.VERSION_DATE_2016_05_19);
 		service.setUsernameAndPassword("9354769b-afa9-4666-9417-9bd92a6c48cc", "8ZSrKP2Y1SGG");
@@ -210,11 +212,13 @@ public class App {
 		ToneAnalysis tone = service.getTone(Analizar, null).execute();
 		// System.out.println(tone.toString());
 		System.out.println("Termina analizador");
-		CreateJson(tone.toString());
+		return tone.toString();
 
 	}
 
 	public static void SpeechToText() throws InterruptedException, LineUnavailableException {
+		Conversacion = new ArrayList<String>();
+		Resultado="";
 		SpeechToText service = new SpeechToText();
 		service.setUsernameAndPassword("d6484b2a-587c-4819-ba78-2988c14b6f36", "uV7ngppwWo37");
 
@@ -222,7 +226,7 @@ public class App {
 		int sampleRate = 16000;
 		AudioFormat format = new AudioFormat(sampleRate, 16, 1, true, false);
 		DataLine.Info info = new DataLine.Info(TargetDataLine.class, format);
-
+		try{
 		if (!AudioSystem.isLineSupported(info)) {
 			System.out.println("Line not supported");
 			System.exit(0);
@@ -241,14 +245,14 @@ public class App {
 
 		service.recognizeUsingWebSocket(audio, options, new BaseRecognizeCallback() {
 			public void onTranscription(SpeechResults speechResults) {
-				Resultado="";
+				
 				List<Transcript> V1 = speechResults.getResults();
 				Transcript V2 = V1.get(0);
 				if (V2.isFinal() != false) {
 					List<SpeechAlternative> V3 = V2.getAlternatives();
 					SpeechAlternative V4 = V3.get(0);
 					System.out.println(V4.getTranscript() + " ");
-					Resultado += V4.getTranscript() + " ";
+					Conversacion.add(V4.getTranscript());
 				}
 			}
 		});
@@ -258,8 +262,16 @@ public class App {
 
 		// closing the WebSockets underlying InputStream will close the
 		// WebSocket itself.
+
 		line.stop();
 		line.close();
 		System.out.println("Fin.");
+		for(int i=0;i<Conversacion.size();i++){
+			Resultado += Conversacion.get(i);
+		}
+		System.out.println(Resultado);
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 }

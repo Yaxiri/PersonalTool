@@ -27,7 +27,8 @@ public class analisis extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		App.ToneAnalyzer(App.Resultado);
+		response.setContentType("text/html");
+        response.getWriter().print(App.ToneAnalyzer(App.Resultado));
 	}
 
 	/**

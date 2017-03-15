@@ -35,6 +35,37 @@
 				</ul>
 			</nav>
 			
+				<script>
+	function download()
+	{
+		var element = document.createElement('a');
+		element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(document.getElementById("escritura").value));
+		element.setAttribute('download', "Data.txt");
+ 
+		element.style.display = 'none';
+		document.body.appendChild(element);
+ 
+		element.click();
+ 
+		document.body.removeChild(element);
+	}
+	
+	function download2()
+	{
+		var element = document.createElement('a');
+		element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(document.getElementById("escritura2").value));
+		element.setAttribute('download', "Data.json");
+ 
+		element.style.display = 'none';
+		document.body.appendChild(element);
+ 
+		element.click();
+ 
+		document.body.removeChild(element);
+	}
+</script>
+			
+			
 		</header>
 
 		<!-- Banner -->
@@ -75,44 +106,72 @@
 								precisa.</p>
 						</div>
 						<div class="4u$ 12u$(medium)">
-							<textarea id="escritura" name="comentarios" method="get" rows="10" cols="40"></textarea>
-							</br>
-
+						<form onsubmit="download(this['text'].value)">
+							<textarea id="escritura" name="text" rows="10" cols="40"></textarea>
+							<br>
 							<ul class="actions">
 								<li><a  onclick="speechToText()" class="button">Play Record</a></li>
 							</ul>
+							<p><input type="button" onclick='download()' value="DESCARGAR"></p>
+							
+
+							
+							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 			<a href="#two" class="goto-next scrolly">Next</a>
 		</section>
-
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 		<!-- Two -->
-		<section id="two" class="spotlight style2 right">
-			<span class="image fit main"><img src="images/pic03.jpg"
+		
+				<section id="one" class="spotlight style1 bottom">
+			<span class="image fit main"><img src="images/pic02.jpg"
 				alt="" /></span>
 			<div class="content">
-				<header>
+				<div class="container">
+					<div class="row">
+						<div class="4u 12u$(medium)">
+							<header>
 					<h2>Tone Analyzer</h2>
 					<p>Análisis lingüístico cognitivo para identificar una serie de
 						tonos en ambos niveles, de frase y de documento.</p>
 				</header>
-				<p>En el texto detecta tres tipos de tonos, incluidos la emoción
+						</div>
+						<div class="4u 12u$(medium)">
+							<p>En el texto detecta tres tipos de tonos, incluidos la emoción
 					(ira, asco, miedo, alegría y tristeza), actitudes sociales
 					(franqueza, diligencia, extroversión, simpatía y rango emocional),
 					y estilos de lenguaje (analítico, seguro y vacilante).</p>
-				<ul class="actions">
-				
-					<li><a onclick="analisis()" class="button">Analizar</a></li>
-					<li><a id="analisis" href="data.json" download="AnalisisTono.json">Descargar Archivo</a></li>
-					
-				</ul>
-				
-			</div>
-			<a href="#three" class="goto-next scrolly">Next</a>
-		</section>
+						</div>
+						<div class="4u$ 12u$(medium)">
+						<form onsubmit="download(this['text'].value)">
+							<textarea readonly="readonly" id="escritura2" name="text2" rows="10" cols="40"></textarea>
+							<br>
+							<ul class="actions">
+								<li><a  onclick="analisis()" class="button">Analisis</a></li>
+							</ul>
+							<p><input type="button" onclick='download2()' value="DESCARGAR"></p>
+							
 
+							
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="#two" class="goto-next scrolly">Next</a>
+		</section>
+			<br>
+	<br>
+	<br>
+	<br>
+	<br>
 		<!-- Three -->
 		
 		<section id="three" class="spotlight style1 bottom">
@@ -245,6 +304,8 @@
 		function analisis(){
 			xhrGet("analisis", function(responseText){
 				// add to document
+				var mytitle = document.getElementById('escritura2');
+				mytitle.innerHTML = responseText;
 
 			}, function(err){
 				console.log(err);
