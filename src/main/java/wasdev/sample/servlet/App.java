@@ -31,13 +31,19 @@ import com.ibm.watson.developer_cloud.text_to_speech.v1.util.WaveUtils;
 import com.ibm.watson.developer_cloud.tone_analyzer.v3.model.ToneAnalysis;
 
 public class App {
-	public static void main(String[] args) throws IOException {
-
-		// ToneAnalyzer();
-		// DocumentConversion();
-		// CreateJson("JAJAJA");
-		//Traductor("HOLA","ENGLISH");
-		//textToSpeech("HELLO SEXY BABY","ENGLISH");
+	
+	static String Resultado;
+	
+	public static void main(String[] args) throws IOException, InterruptedException, LineUnavailableException {
+		//Resultado = "";
+		//SpeechToText();
+		//System.out.println("INICIA IMPRESION*********");
+		//System.out.println(Resultado);
+		//System.out.println("TERMINA IMPRESION*********");
+		//System.out.println(Traductor(Resultado, "ENGLISH"));
+		//textToSpeech(Traductor(Resultado, "ENGLISH"), "ENGLISH");
+		//Resultado = "";
+		ToneAnalyzer("HOLA");
 	}
 
 	public static void CreateJson(String pDatos) throws IOException {
@@ -45,8 +51,8 @@ public class App {
 		try {
 			// Crear un objeto File se encarga de crear o abrir acceso a un
 			// archivo que se especifica en su constructor
-			File archivo = new File("archivo.json");
-			// File archivo = new File("assets/archivo/data.json");
+			//File archivo = new File("archivo.json");
+			 File archivo = new File("../data.json");
 
 			if (archivo.delete()) {
 				System.out.println("El fichero ha sido borrado satisfactoriamente");
@@ -71,20 +77,12 @@ public class App {
 		}
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
 	public static void textToSpeech(String pText,String pIdioma){
 		
 		TextToSpeech service = new TextToSpeech();
 		service.setUsernameAndPassword("3f07afb1-7751-4dd6-98f6-2f7059f96333", "5CqvQJicuUZR");
 		
-		File archivo = new File("src/main/webapp/assets/archivo/audio.wav");
+		File archivo = new File("audio.wav");
 
 		if (archivo.delete()) {
 			System.out.println("El fichero ha sido borrado satisfactoriamente");
@@ -101,7 +99,7 @@ public class App {
 				  
 				  
 				  
-				  OutputStream out = new FileOutputStream("src/main/webapp/assets/archivo/audio.wav");
+				  OutputStream out = new FileOutputStream("audio.wav");
 				  byte[] buffer = new byte[1024];
 				  int length;
 				  while ((length = in.read(buffer)) > 0) {
@@ -123,7 +121,7 @@ public class App {
 				  
 				  
 				  
-				  OutputStream out = new FileOutputStream("src/main/webapp/assets/archivo/audio.wav");
+				  OutputStream out = new FileOutputStream("audio.wav");
 				  byte[] buffer = new byte[1024];
 				  int length;
 				  while ((length = in.read(buffer)) > 0) {
@@ -144,7 +142,7 @@ public class App {
 				  
 				  
 				  
-				  OutputStream out = new FileOutputStream("src/main/webapp/assets/archivo/audio.wav");
+				  OutputStream out = new FileOutputStream("audio.wav");
 				  byte[] buffer = new byte[1024];
 				  int length;
 				  while ((length = in.read(buffer)) > 0) {
@@ -165,7 +163,7 @@ public class App {
 				  
 				  
 				  
-				  OutputStream out = new FileOutputStream("src/main/webapp/assets/archivo/audio.wav");
+				  OutputStream out = new FileOutputStream("audio.wav");
 				  byte[] buffer = new byte[1024];
 				  int length;
 				  while ((length = in.read(buffer)) > 0) {
@@ -181,8 +179,6 @@ public class App {
 		}
 		
 	}
-	
-	
 	
 	public static String Traductor(String pDatos,String pIdioma){
 		
@@ -205,13 +201,6 @@ public class App {
 		
 	}
 
-		
-	
-		
-	
-	
-	
-	
 	public static void ToneAnalyzer(String Analizar) throws IOException {
 		com.ibm.watson.developer_cloud.tone_analyzer.v3.ToneAnalyzer service = new com.ibm.watson.developer_cloud.tone_analyzer.v3.ToneAnalyzer(
 				com.ibm.watson.developer_cloud.tone_analyzer.v3.ToneAnalyzer.VERSION_DATE_2016_05_19);
@@ -225,13 +214,7 @@ public class App {
 
 	}
 
-	
-	
-	
-	
-	
-	
-	public void SpeechToText() throws InterruptedException, LineUnavailableException {
+	public static void SpeechToText() throws InterruptedException, LineUnavailableException {
 		SpeechToText service = new SpeechToText();
 		service.setUsernameAndPassword("d6484b2a-587c-4819-ba78-2988c14b6f36", "uV7ngppwWo37");
 
@@ -251,33 +234,32 @@ public class App {
 
 		AudioInputStream audio = new AudioInputStream(line);
 
-		RecognizeOptions options = new RecognizeOptions.Builder().continuous(true).interimResults(true)
+		RecognizeOptions options = new RecognizeOptions.Builder().continuous(true).interimResults(true).model("es-ES_BroadbandModel")
 				// .inactivityTimeout(5) // use this to stop listening when the
 				// speaker pauses, i.e. for 5s
 				.contentType(HttpMediaType.AUDIO_RAW + "; rate=" + sampleRate).build();
 
 		service.recognizeUsingWebSocket(audio, options, new BaseRecognizeCallback() {
 			public void onTranscription(SpeechResults speechResults) {
+				Resultado="";
 				List<Transcript> V1 = speechResults.getResults();
 				Transcript V2 = V1.get(0);
 				if (V2.isFinal() != false) {
 					List<SpeechAlternative> V3 = V2.getAlternatives();
 					SpeechAlternative V4 = V3.get(0);
-					System.out.println(V4.getTranscript());
+					System.out.println(V4.getTranscript() + " ");
+					Resultado += V4.getTranscript() + " ";
 				}
-
 			}
 		});
 
 		System.out.println("Listening to your voice for the next 30s...");
-		Thread.sleep(30 * 1000);
+		Thread.sleep(60 * 1000);
 
 		// closing the WebSockets underlying InputStream will close the
 		// WebSocket itself.
 		line.stop();
 		line.close();
-
 		System.out.println("Fin.");
 	}
-
 }

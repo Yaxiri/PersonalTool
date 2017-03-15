@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sound.sampled.LineUnavailableException;
 
 /**
  * Servlet implementation class SimpleServlet
@@ -20,8 +21,18 @@ public class SimpleServlet extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html");
-        response.getWriter().print("Personal TOOL!");
+    	//response.setContentType("text/html");
+        //response.getWriter().print(App.Resultado);
+    	try {
+			App.SpeechToText();
+		} catch (InterruptedException | LineUnavailableException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+		}
+
+        
+        
     }
 
 }

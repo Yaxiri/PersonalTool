@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <!--
 	Landed by HTML5 UP
@@ -20,14 +21,9 @@
 
 		<!-- Header -->
 		
-		<script>
+
 		
-		
-			function playSound() {
-			document.all.sound.src = "assets/archivo/audio.wav"
-			}
-		
-		</script>
+		DISEÑO SOFTWARE
 		
 		<header id="header">
 			<h1 id="logo">
@@ -79,11 +75,11 @@
 								precisa.</p>
 						</div>
 						<div class="4u$ 12u$(medium)">
-							<textarea name="comentarios" rows="10" cols="40"></textarea>
+							<textarea id="escritura" name="comentarios" method="get" rows="10" cols="40"></textarea>
 							</br>
 
 							<ul class="actions">
-								<li><a href="#" class="button">Play Record</a></li>
+								<li><a  onclick="speechToText()" class="button">Play Record</a></li>
 							</ul>
 						</div>
 					</div>
@@ -108,8 +104,9 @@
 					y estilos de lenguaje (analítico, seguro y vacilante).</p>
 				<ul class="actions">
 				
-					<li><a href="#" onclick="mostrar()" class="button">Analizar</a></li>
-					<li><a id="analisis" href="assets/archivo/archivo.json" download="AnalisisTono.json">Descargar Archivo</a></li>
+					<li><a onclick="analisis()" class="button">Analizar</a></li>
+					<li><a id="analisis" href="data.json" download="AnalisisTono.json">Descargar Archivo</a></li>
+					
 				</ul>
 				
 			</div>
@@ -118,29 +115,49 @@
 
 		<!-- Three -->
 		
-		<section id="one" class="spotlight style1 bottom">
+		<section id="three" class="spotlight style1 bottom">
 			<span class="image fit main"><img src="images/pic02.jpg"
 				alt="" /></span>
+				<br>
+				<br>
 			<div class="content">
 				<div class="container">
+				<br>
 					<div class="row">
 						<div class="4u 12u$(medium)">
+						<br>
+						<br>
 							<header>
 								<h2>Language Translator</h2>
 								<p>¿Desea traducir textos de forma dinámica?</p>
 							</header>
 						</div>
 						<div class="4u 12u$(medium)">
+						<br>
+						<br>
 							<p>¡Puede hacerlo con Watson Language Translator! Conecte el
 								servicio de Watson a su código y podrá optimizar la potencia de
 								nuestro servicio .</p>
 						</div>
+						<br>
 						<div class="4u$ 12u$(medium)">
-							<textarea  readonly="readonly" name="comentarios" rows="10" cols="40"></textarea>
+						
+							<textarea  readonly="readonly" id="traducido" rows="10" cols="40"></textarea>
 							</br>
 
 							<ul class="actions">
-								<li><a href="#" class="button">Translate</a></li>
+							
+							<select id="translate">
+								  <option value="ENGLISH">ENGLISH</option>
+								  <option value="FRENCH">FRENCH</option>
+								  <option value="ITALIAN">ITALIAN</option>
+								  <option value="PORTUGUESE">PORTUGUESE</option>
+								</select>
+								</br>
+
+								<a onclick="escribir()" class="button">Translate</a>
+							</br>
+								</br>
 								
 								<li><a href="assets/archivo/audio.wav" class="button" title="Listen - Audio">Play</a></li>
 							</ul>
@@ -176,14 +193,74 @@
 	</div>
 
 	<!-- Scripts -->
+			<script>
+		
+		function acabarCuentaAtras(){
+		    clearInterval(temporizador); // Paramos la ejecución del método, indicando la variable creada al final
+			
+		    alert("Posee 60 segundos de grabacion");
+			
+		}
+		
+		
+		
+		
+		function speechToText(){
+			xhrGet("SimpleServlet", function(responseText){
+				// add to document
+				var mytitle = document.getElementById('escritura');
+				mytitle.innerHTML = responseText;
+
+			}, function(err){
+				console.log(err);
+			});
+			
+			alert ('Posee 60 segundos de grabacion'); 
+			setTimeout ("speechToText2()", 61000); 
+				
+		}
+		
+		function prueba(){
+			
+			var contenidoDeArchivo = "Hola Mundo!";
+			var elem = document.getElementById('descargar');
+
+			elem.download = "archivo.txt";
+			elem.href = "data:application/octet-stream," 
+			                     + encodeURIComponent(contenidoDeArchivo);
+		}
+		
+		function speechToText2(){
+			 
+			xhrGet("ObtenerResultado", function(responseText){
+				// add to document
+				var mytitle = document.getElementById('escritura');
+				mytitle.innerHTML = responseText;
+		
+			}, function(err){
+				console.log(err);
+			});
+		}
+		
+		function analisis(){
+			xhrGet("analisis", function(responseText){
+				// add to document
+
+			}, function(err){
+				console.log(err);
+			});
+		}
+		
+		</script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
 	<script src="assets/js/jquery.dropotron.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
+	<script type="text/javascript" src="index.js"></script>
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-	<script src="assets/js/main.js"></script>
+
 	
 		
 
